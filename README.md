@@ -1,5 +1,6 @@
 # Reto-3
 **Ejercicio, clase 7**
+
 Cree la clase Rectangle.
 The rectangle should be inicialice using any of these 3 methods:
 
@@ -19,6 +20,7 @@ Create a method called compute_interference_point(Point) that returns if a point
 Optional: Define a method called compute_interference_line() that return if a line or part of it is inside of a rectangle.
 
 **Descripción del ejercicio**
+
 se implementó la clase Rectangle, la cual puede construirse utilizando métodos distintos: se hizo usando dos esquinas opuestas. Se definieron atributos como width, height y center, y métodos como compute_area() y compute_perimeter() para calcular el área y el perímetro. Además, se creó la clase Square que hereda de Rectangle, y se implementó el método compute_interference_point() para verificar si un punto está dentro del rectángulo.
 ```python
 class Point:
@@ -67,6 +69,7 @@ if __name__ == "__main__":
     print("Perímetro del cuadrado:", cuadrado.rect_perimeter())
 ```
 **Ejercicio, clase 8**
+
 Create class Line.
 length, slope, start, end: Instance attributes, two of them being points (so a line is composed at least of two points).
 compute_length(): should return the line´s length
@@ -78,6 +81,7 @@ Redefine the class Rectangle, adding a new method of initialization using 4 Line
 Optional: Define a method called discretize_line() that creates an array on n equally spaced points in the line and assigned as a instance attribute.
 
 **Descripción del ejercicio**
+
 En el ejercicio de la clase 8 se aplicaron los conceptos de composición para construir la clase Rectangle a partir de cuatro objetos Line, cada uno representando un lado del rectángulo. Se definió la clase Line con atributos como punto inicial y final, y métodos para calcular la longitud, la pendiente, y verificar si la línea cruza los ejes X o Y. Luego, la clase Rectangle se diseñó para recibir dos esquinas opuestas y generar sus lados como líneas, permitiendo calcular el área y el perímetro. Opcionalmente, se implementó el método discretize_line() para generar puntos equidistantes sobre una línea.
 ```python
 class Point:
@@ -160,6 +164,7 @@ if __name__ == "__main__":
     print("Pendiente de la línea superior:", rect.top.compute_slope())
 ```
 **RETO 3**
+
 Create a repo with the class exercise
 Restaurant scenario: You want to design a program to calculate the bill for a customer's order in a restaurant.
 Define a base class MenuItem: This class should have attributes like name, price, and a method to calculate the total price.
@@ -168,6 +173,7 @@ Define an Order class: This class should have a list of MenuItem objects and met
 Create a class diagram with all classes and their relationships. The menu should have at least 10 items. The code should follow PEP8 rules.
 
 **Descripción del ejercicio**
+
 En el Reto 3 se diseñó un sistema para calcular la factura de un pedido en un restaurante, aplicando los principios de herencia y composición. Se creó una clase base MenuItem con atributos como name y price, y se definieron subclases como Beverage, Appetizer y MainCourse, que heredan de MenuItem y agregan atributos específicos como size, is_vegan y calories. Además, se implementó la clase Order, que utiliza composición para almacenar una lista de elementos del menú y calcular el total del pedido, aplicando un descuento si hay cinco o más productos. El menú incluye más de diez elementos variados, cumpliendo con los requisitos del ejercicio.
 ```python
 class MenuItem:
@@ -233,6 +239,7 @@ if __name__ == "__main__":
     print("Total con descuento:", order.apply_discount())
 ```
 **Diagrama**
+
 ```mermaid
 classDiagram
     class MenuItem {
