@@ -352,3 +352,4 @@ classDiagram
     Menu --> ArrozConPollo
     Menu --> PastaAlPesto
 ```
+   
